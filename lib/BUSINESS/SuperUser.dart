@@ -6,7 +6,7 @@ class SuperUser extends User {
     this.password = password;
   }
 
-  void FillUser(
+  void fillUser(
       username, password, firstName, lastName, email, phoneNumber, birthDate) {
     this.username = username;
     this.password = password;
