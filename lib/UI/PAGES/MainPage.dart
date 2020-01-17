@@ -21,7 +21,7 @@ class MainPage extends StatelessWidget {
               ),
             ), // AssetImage(),
           ),
-          backgroundColor: Colors.grey[300],
+          backgroundColor: Color.fromRGBO(55, 9, 105, 1),
         ),
         body: Stack(
           children: <Widget>[
@@ -47,7 +47,7 @@ class MainPage extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromRGBO(87, 12, 168,1),
         //bottomNavigationBar: MainNavigation(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -55,7 +55,7 @@ class MainPage extends StatelessWidget {
           },
           child: Icon(Icons.add),
           elevation: 14,
-          backgroundColor: Colors.cyan,
+          backgroundColor: Color.fromRGBO(87, 12, 168,1),
           hoverColor: Colors.red,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

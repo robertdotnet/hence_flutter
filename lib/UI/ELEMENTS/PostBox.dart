@@ -5,7 +5,6 @@ class PostBox extends StatelessWidget {
   String _title, _previewContent;
   Image _image;
 
-  //TODO: Make an image placeholder for when it is not specified in the constructor
   PostBox(
       [String title = 'Article Title',
       String previewContent = 'Preview Content',
@@ -42,7 +41,9 @@ class PostBox extends StatelessWidget {
             margin: EdgeInsets.fromLTRB(2, 8, 2, 2),
             decoration: BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.cover, image: NetworkImage('https://static.boredpanda.com/blog/wp-content/uploads/2018/10/artist-reimagined-cartoons-black-characters-tyron-handy-fb__700-png.jpg')),
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://static.boredpanda.com/blog/wp-content/uploads/2018/10/artist-reimagined-cartoons-black-characters-tyron-handy-fb__700-png.jpg')),
               borderRadius: BorderRadius.all(Radius.circular(12.0)),
               color: Colors.redAccent,
             ),
@@ -51,12 +52,12 @@ class PostBox extends StatelessWidget {
             _title,
             style: TextStyle(
               fontSize: 25,
-              color: Colors.white,
+              color: Color.fromRGBO(135, 251, 255, 20),
             ),
           ),
           Text(_previewContent,
               style: TextStyle(
-                color: Colors.white,
+                color: Color.fromRGBO(135, 251, 255, 20),
               )),
         ],
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -65,7 +66,7 @@ class PostBox extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(6, 0, 6, 6),
       margin: EdgeInsets.symmetric(horizontal: 5, vertical: 5), //all(15),
       decoration: BoxDecoration(
-        color: Colors.grey[900],
+        color: Color.fromRGBO(55, 9, 105, 1),
         borderRadius: BorderRadius.circular(20.0),
       ),
     );
