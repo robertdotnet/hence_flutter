@@ -11,17 +11,20 @@ class MainPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text(
-              'Hence',
-              style: TextStyle(
-                color: Colors.black,
-                fontStyle: FontStyle.italic,
-                fontFamily: 'Montserrat',
-                fontSize: 45,
-              ),
-            ), // AssetImage(),
-          ),
-          backgroundColor: Color.fromRGBO(55, 9, 105, 1),
+              child: Container(
+            height: 53,
+            width: 100,
+            //margin: EdgeInsets.fromLTRB(2, 8, 2, 2),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/hencelogo.png')),
+              borderRadius: BorderRadius.all(Radius.circular(12.0)),
+              //color: Colors.redAccent,
+            ),
+          )),
+          backgroundColor: Colors.white,
+          //Color.fromRGBO(55, 9, 105, 1),
         ),
         body: Stack(
           children: <Widget>[
@@ -42,23 +45,25 @@ class MainPage extends StatelessWidget {
                 PostBox('Just title test', 'And some preview'),
                 PostBox('Hai ca a iesit testu csm',
                     'Lasa descriere acuma ce mai trebuie lol :)))'),
+                PostBox(
+                    'New IPhone released with 6 cameras', 'asdfasdfadfadfadf'),
                 //collection of cards
               ],
             ),
           ],
         ),
-        backgroundColor: Color.fromRGBO(87, 12, 168,1),
+        backgroundColor: Color.fromRGBO(87, 12, 168, 1),
         //bottomNavigationBar: MainNavigation(),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-
-          },
+          onPressed: () {},
           child: Icon(Icons.add),
-          elevation: 14,
-          backgroundColor: Color.fromRGBO(87, 12, 168,1),
+          elevation: 15,
+          backgroundColor: Color.fromRGBO(55, 9, 105, 1),
+          tooltip: 'Add a new post',
           hoverColor: Colors.red,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        bottomNavigationBar: MainNavigation(),
       ),
     );
   }

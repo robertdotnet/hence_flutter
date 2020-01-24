@@ -52,12 +52,12 @@ class PostBox extends StatelessWidget {
             _title,
             style: TextStyle(
               fontSize: 25,
-              color: Color.fromRGBO(135, 251, 255, 20),
+              color: Colors.white,
             ),
           ),
           Text(_previewContent,
               style: TextStyle(
-                color: Color.fromRGBO(135, 251, 255, 20),
+                color: Colors.white,
               )),
         ],
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
