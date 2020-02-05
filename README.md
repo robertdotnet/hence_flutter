@@ -1,7 +1,8 @@
-# hence_flutter
-
 # Hence
-> ``Let's imagine things together!``
+<img src="assets/images/hencelogo.png" width=200px height=200px/>
+<br/>
+
+``Let's imagine things together!``
 
 Hence is meant to be a simple Android(so far) app that will include discussions regarding
 - latest news
