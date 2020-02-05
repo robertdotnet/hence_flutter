@@ -19,22 +19,6 @@ class PostBox extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-//          Container(
-//            child: ClipRect(
-//              child: Image(
-//                image: NetworkImage(
-//                    'https://static.boredpanda.com/blog/wp-content/uploads/2018/10/artist-reimagined-cartoons-black-characters-tyron-handy-fb__700-png.jpg'),
-//                height: 196,
-//                width: 360,
-//              ),
-//
-////              borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-//
-//            ),
-//            decoration: BoxDecoration(
-//              borderRadius: BorderRadius.all(Radius.circular(20.0)),
-//            ),
-//          ),
           Container(
             height: 180,
             width: 360,
@@ -67,7 +51,19 @@ class PostBox extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 5, vertical: 5), //all(15),
       decoration: BoxDecoration(
         color: Color.fromRGBO(55, 9, 105, 1),
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),topLeft: Radius.circular(20),),
+        boxShadow: [BoxShadow(
+          blurRadius: 2,
+          color: Colors.purple[100],
+          spreadRadius: 0.2,
+          offset: Offset.fromDirection(16),
+        ),
+          BoxShadow(
+            blurRadius: 1,
+            color: Colors.deepPurple,
+            spreadRadius: 0.2,
+            offset: Offset.fromDirection(-8),
+          )],
       ),
     );
   }

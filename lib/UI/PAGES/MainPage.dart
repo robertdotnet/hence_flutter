@@ -20,10 +20,10 @@ class MainPage extends StatelessWidget {
                   fit: BoxFit.cover,
                   image: AssetImage('assets/images/hencelogo.png')),
               borderRadius: BorderRadius.all(Radius.circular(12.0)),
-              //color: Colors.redAccent,
+              color: Colors.redAccent,
             ),
           )),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey,
           //Color.fromRGBO(55, 9, 105, 1),
         ),
         body: Stack(
