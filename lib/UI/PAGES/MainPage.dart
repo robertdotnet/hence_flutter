@@ -10,33 +10,34 @@ class MainPage extends StatelessWidget {
       title: 'Hence',
       home: Scaffold(
         appBar: AppBar(
-          title: Center(
+          flexibleSpace: Container(
+            child: Center(
               child: Container(
-            height: 53,
-            width: 100,
-            //margin: EdgeInsets.fromLTRB(2, 8, 2, 2),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/hencelogo.png')),
-              borderRadius: BorderRadius.all(Radius.circular(12.0)),
-              color: Colors.redAccent,
+                height: 53,
+                width: 100,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/images/hencelogo.png')),
+                  borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                ),
+              ),
             ),
-          )),
-          backgroundColor: Colors.grey,
-          //Color.fromRGBO(55, 9, 105, 1),
+            decoration: BoxDecoration(
+              gradient: new RadialGradient(
+                colors: [
+                  Color(0xfffde9cc),
+                  Color(0xcf4a4b7b),
+                ],
+                radius: 2,
+              ),
+            ),
+          ),
+          backgroundColor:
+              Color.alphaBlend(Color(0xfffde9cc), Color(0xcf4a4b7b)),
         ),
         body: Stack(
           children: <Widget>[
-//            Container(
-//              decoration: BoxDecoration(
-//                image: DecorationImage(
-//                  image: NetworkImage(
-//                      'https://www.kunst-fuer-alle.de/media_kunst/img/41/g/41_00139613~christian-sell_incident-during-a-cavalry-engagement-in-1870.jpg'),
-//                  fit: BoxFit.cover,
-//                ),
-//              ),
-//            ),
             ListView(
               key: Key('MainListViewKey'),
               scrollDirection: Axis.vertical,
@@ -47,22 +48,26 @@ class MainPage extends StatelessWidget {
                     'Lasa descriere acuma ce mai trebuie lol :)))'),
                 PostBox(
                     'New IPhone released with 6 cameras', 'asdfasdfadfadfadf'),
-                //collection of cards
+                PostBox('Title for test', 'random'),
               ],
             ),
           ],
         ),
-        backgroundColor: Color.fromRGBO(87, 12, 168, 1),
-        //bottomNavigationBar: MainNavigation(),
+        backgroundColor: Color(0xff3c3846),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(Icons.add),
-          elevation: 15,
-          backgroundColor: Color.fromRGBO(55, 9, 105, 1),
+          child: Icon(
+            Icons.add,
+            color: Color(0xfffde9cc),
+          ),
+          elevation: 4,
+          backgroundColor: Color(0xff3c3846),
           tooltip: 'Add a new post',
-          hoverColor: Colors.red,
+          clipBehavior: Clip.antiAlias,
+          shape: new BeveledRectangleBorder(
+              borderRadius: new BorderRadius.circular(50.0)),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: MainNavigation(),
       ),
     );
